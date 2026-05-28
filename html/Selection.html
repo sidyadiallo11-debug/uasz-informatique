@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Résultats de Sélection — Département Informatique UASZ</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .search-box { display:flex; gap:10px; margin-bottom:28px; }
+    .search-box input {
+      flex:1; padding:12px 16px; border:2px solid #dce8f5;
+      border-radius:8px; font-size:.95rem; outline:none;
+      transition:border-color .18s;
+    }
+    .search-box input:focus { border-color:var(--bleu-clair); }
+    .search-box button {
+      padding:12px 24px; background:var(--bleu); color:#fff;
+      border:none; border-radius:8px; font-weight:600; cursor:pointer;
+      transition:background .18s;
+    }
+    .search-box button:hover { background:#142d56; }
+    .result-found  { background:#e6f4e6; border:1px solid #a3d9a3; border-radius:8px; padding:20px 24px; }
+    .result-absent { background:#fff0e6; border:1px solid #f4a366; border-radius:8px; padding:20px 24px; }
+    .result-name   { font-size:1.2rem; font-weight:700; color:var(--bleu); }
+    .result-status { font-size:1rem; color:var(--vert); margin-top:6px; }
+    #result-zone   { margin-top:8px; min-height:60px; }
+  </style>
+</head>
+<body>
+
+<header class="header-uasz">
+  <div class="logo-section">
+    <img src="https://upload.wikimedia.org/wikipedia/fr/8/8b/LOGO-UASZ-2.png" alt="Logo UASZ">
+    <div class="header-text">
+      <h1>Universite Assane Seck de Ziguinchor</h1>
+      <h2>Département d'Informatique</h2>
+    </div>
+  </div>
+  <nav class="navbar">
+    <a href="index.html">Accueil</a>
+    <a href="formations.html">Formations</a>
+    <a href="admission.html">Admission</a>
+    <a href="selection.html" class="active">Sélection</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <h2>🏆 Résultats de Sélection</h2>
+  <p>Consultez les résultats d'admission pour l'année universitaire 2025–2026</p>
+</div>
+
+<main class="container">
+
+  <!-- Statut de publication -->
+  <section class="section">
+    <div class="info-box" style="font-size:1rem">
+      📢 <strong>Publication des résultats :</strong> Les résultats de la session 2025–2026 seront publiés le <strong>1er Septembre 2025</strong>.
+      Cette page sera mise à jour automatiquement à cette date.
+    </div>
+
+    <div class="cards" style="margin-bottom:40px">
+      <div class="card" style="text-align:center">
+        <div class="card-icon">📨</div>
+        <h3>Dossiers reçus</h3>
+        <p style="font-size:2rem;font-weight:700;color:var(--bleu);margin:8px 0">342</p>
+        <p>Candidatures traitées en 2025</p>
+      </div>
+      <div class="card" style="text-align:center">
+        <div class="card-icon">✅</div>
+        <h3>Places disponibles</h3>
+        <p style="font-size:2rem;font-weight:700;color:var(--vert);margin:8px 0">80</p>
+        <p>En Licence 1 (L1) — 2025/2026</p>
+      </div>
+      <div class="card" style="text-align:center">
+        <div class="card-icon">🎓</div>
+        <h3>Places Master</h3>
+        <p style="font-size:2rem;font-weight:700;color:var(--bleu-clair);margin:8px 0">30</p>
+        <p>En Master 1 (M1) — 2025/2026</p>
+      </div>
+    </div>
+
+    <!-- Recherche par nom -->
+    <h2 class="section-titre">Rechercher votre Résultat</h2>
+    <p class="section-sous">Entrez votre nom et prénom tels qu'ils figurent sur votre dossier de candidature.</p>
+
+    <div class="search-box">
+      <input type="text" id="search-input" placeholder="Ex : Diallo Mamadou" oninput="rechercherCandidat()">
+      <button onclick="rechercherCandidat()">🔍 Rechercher</button>
+    </div>
+    <div id="result-zone"></div>
+
+    <div class="warn-box" style="margin-top:24px">
+      ⚠️ <strong>Note :</strong> Les résultats en ligne sont donnés à titre indicatif. La liste officielle est affichée sur les panneaux du Département Informatique. En cas de divergence, la liste affichée fait foi.
+    </div>
+  </section>
+
+  <!-- Liste partielle exemple -->
+  <section class="section" style="border-top:1px solid #dce8f5">
+    <h2 class="section-titre">Liste des Admis — L1 Informatique 2024–2025</h2>
+    <p class="section-sous">Exemple de la liste publiée (données fictives à titre d'illustration).</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>N° Dossier</th><th>Nom et Prénom</th><th>Série Bac</th><th>Mention</th><th>Statut</th></tr>
+        </thead>
+        <tbody id="liste-admis">
+          <tr><td>2024-001</td><td>Diallo Aïssatou</td><td>S2</td><td>Bien</td><td><span class="badge badge-vert">Admis(e)</span></td></tr>
+          <tr><td>2024-002</td><td>Badji Mamadou</td><td>S</td><td>Assez Bien</td><td><span class="badge badge-vert">Admis(e)</span></td></tr>
+          <tr><td>2024-003</td><td>Coly Fatoumata</td><td>S4</td><td>Très Bien</td><td><span class="badge badge-vert">Admis(e)</span></td></tr>
+          <tr><td>2024-004</td><td>Manga Ibrahima</td><td>S2</td><td>Passable</td><td><span class="badge badge-vert">Admis(e)</span></td></tr>
+          <tr><td>2024-005</td><td>Tendeng Rokhaya</td><td>S</td><td>Bien</td><td><span class="badge badge-vert">Admis(e)</span></td></tr>
+          <tr><td>2024-006</td><td>Diédhiou Saliou</td><td>STI</td><td>Assez Bien</td><td><span class="badge badge-vert">Admis(e)</span></td></tr>
+          <tr><td>2024-007</td><td>Sambou Mariama</td><td>S2A</td><td>Bien</td><td><span class="badge badge-vert">Admis(e)</span></td></tr>
+          <tr><td>2024-008</td><td>Faye Ousmane</td><td>S</td><td>Passable</td><td><span class="badge badge-orange">Liste attente</span></td></tr>
+          <tr><td>2024-009</td><td>Gnagna Bineta</td><td>S4</td><td>Bien</td><td><span class="badge badge-vert">Admis(e)</span></td></tr>
+          <tr><td>2024-010</td><td>Bodian Cheikh</td><td>S2</td><td>Très Bien</td><td><span class="badge badge-vert">Admis(e)</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:.85rem;color:var(--texte2);margin-top:8px">* Cette liste est un extrait. La liste complète est disponible au secrétariat du département.</p>
+  </section>
+
+  <!-- Recours -->
+  <section class="section" style="border-top:1px solid #dce8f5">
+    <h2 class="section-titre">Procédure de Recours</h2>
+    <p class="section-sous">Si vous estimez que votre dossier n'a pas été correctement évalué :</p>
+    <ul class="timeline">
+      <li>
+        <strong>Délai de recours : 5 jours ouvrables</strong>
+        <span>À compter de la date de publication des résultats.</span>
+      </li>
+      <li>
+        <strong>Déposer une lettre de recours motivée</strong>
+        <span>Au secrétariat du département, adressée au Chef de Département.</span>
+      </li>
+      <li>
+        <strong>Joindre les pièces justificatives</strong>
+        <span>Copie du dossier, relevés de notes, tout document utile.</span>
+      </li>
+      <li>
+        <strong>Réponse dans les 7 jours</strong>
+        <span>La commission délibère et communique sa décision finale sans appel.</span>
+      </li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <strong>Université Assane Seck de Ziguinchor</strong> — Département Informatique<br>
+  Ziguinchor, Sénégal | <a href="mailto:info@uasz.sn">info@uasz.sn</a>
+</footer>
+
+<script src="../js/nav.js"></script>
+<script>
+const admis = [
+  "Diallo Aïssatou","Badji Mamadou","Coly Fatoumata","Manga Ibrahima",
+  "Tendeng Rokhaya","Diédhiou Saliou","Sambou Mariama","Gnagna Bineta","Bodian Cheikh"
+];
+const attente = ["Faye Ousmane"];
+
+function rechercherCandidat() {
+  const val = document.getElementById('search-input').value.trim().toLowerCase();
+  const zone = document.getElementById('result-zone');
+  if (val.length < 3) { zone.innerHTML = ''; return; }
+
+  const trouve = admis.find(n => n.toLowerCase().includes(val));
+  const enAttente = attente.find(n => n.toLowerCase().includes(val));
+
+  if (trouve) {
+    zone.innerHTML = `<div class="result-found">
+      <div class="result-name">🎉 ${trouve}</div>
+      <div class="result-status">✅ ADMIS(E) en Licence 1 — Informatique 2025/2026</div>
+      <p style="margin-top:8px;font-size:.9rem;color:var(--texte2)">Présentez-vous pour l'inscription définitive du 2 au 15 Septembre avec vos pièces originales.</p>
+    </div>`;
+  } else if (enAttente) {
+    zone.innerHTML = `<div class="result-absent">
+      <div class="result-name">⏳ ${enAttente}</div>
+      <div style="color:var(--orange);font-weight:600;margin-top:6px">Liste d'attente — Position #1</div>
+      <p style="margin-top:8px;font-size:.9rem;color:var(--texte2)">Vous serez contacté(e) si une place se libère. Restez disponible.</p>
+    </div>`;
+  } else {
+    zone.innerHTML = `<div class="result-absent">
+      <p style="font-weight:600;color:var(--orange)">❌ Aucun résultat trouvé pour "<em>${val}</em>"</p>
+      <p style="margin-top:8px;font-size:.9rem;color:var(--texte2)">Vérifiez l'orthographe de votre nom ou consultez la liste affichée au département.</p>
+    </div>`;
+  }
+}
+</script>
+</body>
+</html>

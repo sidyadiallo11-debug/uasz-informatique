@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Département Informatique UASZ</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+    @media(max-width:700px){ .contact-grid { grid-template-columns:1fr; } }
+    .contact-info-card { background:#fff; border:1px solid #dce8f5; border-radius:10px; padding:28px; box-shadow:0 4px 24px rgba(26,58,107,.08); }
+    .contact-info-card h3 { color:var(--bleu); margin-bottom:16px; font-size:1.1rem; }
+    .contact-row { display:flex; gap:14px; align-items:flex-start; margin-bottom:14px; font-size:.93rem; color:var(--texte2); }
+    .contact-row .icon { font-size:1.3rem; flex-shrink:0; margin-top:1px; }
+    .form-group { margin-bottom:16px; }
+    .form-group label { display:block; font-weight:600; font-size:.9rem; color:var(--bleu); margin-bottom:6px; }
+    .form-group input, .form-group select, .form-group textarea {
+      width:100%; padding:11px 14px; border:2px solid #dce8f5;
+      border-radius:8px; font-size:.93rem; font-family:inherit; outline:none;
+      transition:border-color .18s; background:#fff;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color:var(--bleu-clair); }
+    .form-group textarea { height:120px; resize:vertical; }
+    .map-placeholder {
+      background: linear-gradient(135deg, #EBF3FB, #dce8f5);
+      border-radius:10px; padding:40px 20px; text-align:center;
+      border:2px dashed #2E75B6; margin-top:24px;
+    }
+    .horaires-table { width:100%; border-collapse:collapse; font-size:.9rem; margin-top:12px; }
+    .horaires-table td { padding:8px 12px; border-bottom:1px solid #eee; }
+    .horaires-table tr:last-child td { border-bottom:none; }
+    .horaires-table td:first-child { font-weight:600; color:var(--bleu); width:120px; }
+  </style>
+</head>
+<body>
+
+<header class="header-uasz">
+  <div class="logo-section">
+    <img src="https://upload.wikimedia.org/wikipedia/fr/8/8b/LOGO-UASZ-2.png" alt="Logo UASZ">
+    <div class="header-text">
+      <h1>Universite Assane Seck de Ziguinchor</h1>
+      <h2>Département d'Informatique</h2>
+    </div>
+  </div>
+  <nav class="navbar">
+    <a href="index.html">Accueil</a>
+    <a href="formations.html">Formations</a>
+    <a href="admission.html">Admission</a>
+    <a href="selection.html">Sélection</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <h2>📞 Nous Contacter</h2>
+  <p>Une question sur nos formations, l'admission ou les résultats ? Nous sommes là.</p>
+</div>
+
+<main class="container">
+  <section class="section">
+    <div class="contact-grid">
+
+      <!-- Coordonnées -->
+      <div>
+        <div class="contact-info-card" style="margin-bottom:20px">
+          <h3>📍 Coordonnées du Département</h3>
+          <div class="contact-row">
+            <span class="icon">🏛️</span>
+            <div>Département d'Informatique<br>Université Assane Seck de Ziguinchor<br>Bâtiment des Sciences Appliquées<br>BP 523, Ziguinchor, Sénégal</div>
+          </div>
+          <div class="contact-row">
+            <span class="icon">📞</span>
+            <div>+221 33 991 XX XX<br><span style="font-size:.85rem">Secrétariat du département</span></div>
+          </div>
+          <div class="contact-row">
+            <span class="icon">📧</span>
+            <div><a href="mailto:info-informatique@uasz.sn" style="color:var(--bleu-clair)">info-informatique@uasz.sn</a></div>
+          </div>
+          <div class="contact-row">
+            <span class="icon">🌐</span>
+            <div><a href="http://www.uasz.sn" style="color:var(--bleu-clair)" target="_blank">www.uasz.sn</a></div>
+          </div>
+        </div>
+
+        <div class="contact-info-card">
+          <h3>🕐 Horaires d'Ouverture du Secrétariat</h3>
+          <table class="horaires-table">
+            <tr><td>Lundi</td><td>8h00 – 16h30</td></tr>
+            <tr><td>Mardi</td><td>8h00 – 16h30</td></tr>
+            <tr><td>Mercredi</td><td>8h00 – 16h30</td></tr>
+            <tr><td>Jeudi</td><td>8h00 – 16h30</td></tr>
+            <tr><td>Vendredi</td><td>8h00 – 13h00</td></tr>
+            <tr><td>Samedi</td><td><span style="color:var(--orange)">Fermé</span></td></tr>
+            <tr><td>Dimanche</td><td><span style="color:var(--orange)">Fermé</span></td></tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- Formulaire -->
+      <div class="contact-info-card">
+        <h3>✉️ Envoyer un Message</h3>
+        <div id="form-zone">
+          <div class="form-group">
+            <label>Votre Nom et Prénom *</label>
+            <input type="text" id="f-nom" placeholder="Ex : Diallo Mamadou">
+          </div>
+          <div class="form-group">
+            <label>Votre Email *</label>
+            <input type="email" id="f-email" placeholder="votre@email.com">
+          </div>
+          <div class="form-group">
+            <label>Objet de votre demande *</label>
+            <select id="f-objet">
+              <option value="">-- Choisir --</option>
+              <option>Informations sur les formations</option>
+              <option>Dossier d'admission</option>
+              <option>Résultats de sélection</option>
+              <option>Transfert / Équivalence</option>
+              <option>Autre demande</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Votre message *</label>
+            <textarea id="f-message" placeholder="Décrivez votre demande en détail..."></textarea>
+          </div>
+          <button class="btn-primary" onclick="envoyerMessage()" style="width:100%">
+            📤 Envoyer le message
+          </button>
+        </div>
+        <div id="merci-zone" style="display:none;text-align:center;padding:30px 0">
+          <div style="font-size:3rem;margin-bottom:12px">✅</div>
+          <h3 style="color:var(--vert);margin-bottom:8px">Message envoyé !</h3>
+          <p style="color:var(--texte2);font-size:.93rem">Nous vous répondrons dans les 2 jours ouvrables à l'adresse indiquée.</p>
+          <button class="btn-outline" style="margin-top:16px" onclick="document.getElementById('merci-zone').style.display='none';document.getElementById('form-zone').style.display='block'">Envoyer un autre message</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carte / Plan -->
+    <div class="map-placeholder">
+      <div style="font-size:3rem;margin-bottom:10px">🗺️</div>
+      <h3 style="color:var(--bleu);margin-bottom:8px">Plan d'accès — Université Assane Seck de Ziguinchor</h3>
+      <p style="color:var(--texte2);font-size:.93rem">Route de Kabrousse, Ziguinchor, Sénégal<br>GPS : 12.5573° N, 16.2719° W</p>
+      <a href="https://maps.google.com/?q=Université+Assane+Seck+Ziguinchor" target="_blank" class="btn-outline" style="margin-top:14px;display:inline-block">
+        📍 Voir sur Google Maps
+      </a>
+    </div>
+  </section>
+
+  <!-- Équipe pédagogique -->
+  <section class="section" style="border-top:1px solid #dce8f5">
+    <h2 class="section-titre">Équipe Pédagogique</h2>
+    <p class="section-sous">Pour contacter directement un enseignant, passez par le secrétariat.</p>
+    <div class="cards">
+      <div class="card">
+        <div class="card-icon">👨‍💼</div>
+        <h3>Chef de Département</h3>
+        <p>Responsable administratif et pédagogique du département.<br>Contact via le secrétariat.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">👩‍🏫</div>
+        <h3>Responsable Licence</h3>
+        <p>Suivi des étudiants de L1 à L3, gestion des maquettes et emplois du temps.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">👨‍🔬</div>
+        <h3>Responsable Master</h3>
+        <p>Encadrement des mémoires M1/M2, partenariats recherche et entreprises.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <strong>Université Assane Seck de Ziguinchor</strong> — Département Informatique<br>
+  Ziguinchor, Sénégal | <a href="mailto:info@uasz.sn">info@uasz.sn</a>
+</footer>
+
+<script src="../js/nav.js"></script>
+<script>
+function envoyerMessage() {
+  const nom = document.getElementById('f-nom').value.trim();
+  const email = document.getElementById('f-email').value.trim();
+  const objet = document.getElementById('f-objet').value;
+  const msg = document.getElementById('f-message').value.trim();
+  if (!nom || !email || !objet || !msg) {
+    alert('Veuillez remplir tous les champs obligatoires (*)');
+    return;
+  }
+  document.getElementById('form-zone').style.display = 'none';
+  document.getElementById('merci-zone').style.display = 'block';
+}
+</script>
+</body>
+</html>

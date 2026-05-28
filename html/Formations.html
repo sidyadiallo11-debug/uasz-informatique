@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formations — Département Informatique UASZ</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="header-uasz">
+  <div class="logo-section">
+    <img src="https://upload.wikimedia.org/wikipedia/fr/8/8b/LOGO-UASZ-2.png" alt="Logo UASZ">
+    <div class="header-text">
+      <h1>Universite Assane Seck de Ziguinchor</h1>
+      <h2>Département d'Informatique</h2>
+    </div>
+  </div>
+  <nav class="navbar">
+    <a href="index.html">Accueil</a>
+    <a href="formations.html" class="active">Formations</a>
+    <a href="admission.html">Admission</a>
+    <a href="selection.html">Sélection</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <h2>📚 Nos Formations</h2>
+  <p>Licence et Master en Informatique — Maquettes officielles par semestre</p>
+</div>
+
+<main class="container">
+
+  <!-- ── LICENCE ── -->
+  <section class="section">
+    <h2 class="section-titre">Licence Informatique (L1 → L3)</h2>
+    <p class="section-sous">Formation de 3 ans (6 semestres) — 180 crédits ECTS</p>
+
+    <div class="tabs" id="tabs-licence">
+      <button class="tab-btn active" onclick="showTab('licence','s1',this)">Semestre 1</button>
+      <button class="tab-btn" onclick="showTab('licence','s2',this)">Semestre 2</button>
+      <button class="tab-btn" onclick="showTab('licence','s3',this)">Semestre 3</button>
+      <button class="tab-btn" onclick="showTab('licence','s4',this)">Semestre 4</button>
+      <button class="tab-btn" onclick="showTab('licence','s5',this)">Semestre 5</button>
+      <button class="tab-btn" onclick="showTab('licence','s6',this)">Semestre 6</button>
+    </div>
+
+    <!-- S1 -->
+    <div class="tab-content active" id="licence-s1">
+      <div class="info-box">📘 <strong>L1 — Semestre 1</strong> : Fondamentaux de l'informatique et des mathématiques.</div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Code</th><th>Unité d'Enseignement</th><th>Crédits</th><th>CM</th><th>TD</th><th>TP</th></tr></thead>
+          <tbody>
+            <tr><td>INF101</td><td>Algorithmique et Structures de données</td><td><span class="badge badge-bleu">6</span></td><td>45h</td><td>30h</td><td>—</td></tr>
+            <tr><td>INF102</td><td>Programmation en C</td><td><span class="badge badge-bleu">6</span></td><td>30h</td><td>—</td><td>45h</td></tr>
+            <tr><td>MAT101</td><td>Mathématiques Discrètes</td><td><span class="badge badge-bleu">4</span></td><td>30h</td><td>15h</td><td>—</td></tr>
+            <tr><td>INF103</td><td>Architecture des Ordinateurs</td><td><span class="badge badge-bleu">4</span></td><td>30h</td><td>15h</td><td>—</td></tr>
+            <tr><td>INF104</td><td>Systèmes d'Exploitation (intro)</td><td><span class="badge badge-bleu">4</span></td><td>30h</td><td>15h</td><td>—</td></tr>
+            <tr><td>ANG101</td><td>Anglais Technique</td><td><span class="badge badge-bleu">3</span></td><td>—</td><td>30h</td><td>—</td></tr>
+            <tr><td>COM101</td><td>Expression Française et Communication</td><td><span class="badge badge-bleu">3</span></td><td>—</td><td>30h</td><td>—</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="success-box">✅ <strong>Total S1 :</strong> 30 crédits — 180h CM + 135h TD/TP</div>
+    </div>
+
+    <!-- S2 -->
+    <div class="tab-content" id="licence-s2">
+      <div class="info-box">📘 <strong>L1 — Semestre 2</strong> : Approfondissement algorithmique et systèmes.</div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Code</th><th>Unité d'Enseignement</th><th>Crédits</th><th>CM</th><th>TD</th><th>TP</th></tr></thead>
+          <tbody>
+            <tr><td>INF201</td><td>Structures de données avancées</td><td><span class="badge badge-bleu">6</span></td><td>30h</td><td>15h</td><td>30h</td></tr>
+            <tr><td>INF202</td><td>Programmation Orientée Objet (Java)</td><td><span class="badge badge-bleu">6</span></td><td>30h</td><td>—</td><td>45h</td></tr>
+            <tr><td>MAT201</td><td>Algèbre Linéaire et Probabilités</td><td><span class="badge badge-bleu">4</span></td><td>30h</td><td>15h</td><td>—</td></tr>
+            <tr><td>INF203</td><td>Réseaux Informatiques (bases)</td><td><span class="badge badge-bleu">4</span></td><td>30h</td><td>15h</td><td>—</td></tr>
+            <tr><td>INF204</td><td>Bases de données relationnelles</td><td><span class="badge badge-bleu">4</span></td><td>30h</td><td>—</td><td>30h</td></tr>
+            <tr><td>ANG201</td><td>Anglais Technique II</td><td><span class="badge badge-bleu">3</span></td><td>—</td><td>30h</td><td>—</td></tr>
+            <tr><td>PER201</td><td>Projet Personnel Professionnel</td><td><span class="badge badge-bleu">3</span></td><td>—</td><td>30h</td><td>—</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="success-box">✅ <strong>Total S2 :</strong> 30 crédits — 150h CM + 180h TD/TP</div>
+    </div>
+
+    <!-- S3 -->
+    <div class="tab-content" id="licence-s3">
+      <div class="info-box">📗 <strong>L2 — Semestre 3</strong> : Génie logiciel et systèmes avancés.</div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Code</th><th>Unité d'Enseignement</th><th>Crédits</th><th>CM</th><th>TD</th><th>TP</th></tr></thead>
+          <tbody>
+            <tr><td>INF301</td><td>Génie Logiciel et Méthodes Agiles</td><td><span class="badge badge-bleu">6</span></td><td>30h</td><td>15h</td><td>30h</td></tr>
+            <tr><td>INF302</td><td>Programmation Web (HTML/CSS/JS)</td><td><span class="badge badge-bleu">6</span></td><td>20h</td><td>—</td><td>50h</td></tr>
+            <tr><td>INF303</td><td>Systèmes d'Exploitation avancés (Linux)</td><td><span class="badge badge-bleu">4</span></td><td>25h</td><td>—</td><td>35h</td></tr>
+            <tr><td>INF304</td><td>Réseaux TCP/IP et Administration</td><td><span class="badge badge-bleu">4</span></td><td>25h</td><td>15h</td><td>20h</td></tr>
+            <tr><td>MAT301</td><td>Statistiques et Recherche Opérationnelle</td><td><span class="badge badge-bleu">4</span></td><td>30h</td><td>15h</td><td>—</td></tr>
+            <tr><td>INF305</td><td>Base de données avancée (SQL/NoSQL)</td><td><span class="badge badge-bleu">6</span></td><td>25h</td><td>—</td><td>45h</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="success-box">✅ <strong>Total S3 :</strong> 30 crédits</div>
+    </div>
+
+    <!-- S4 -->
+    <div class="tab-content" id="licence-s4">
+      <div class="info-box">📗 <strong>L2 — Semestre 4</strong> : Approfondissement et projets.</div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Code</th><th>Unité d'Enseignement</th><th>Crédits</th><th>CM</th><th>TD</th><th>TP</th></tr></thead>
+          <tbody>
+            <tr><td>INF401</td><td>Développement Web Back-end (PHP/Python)</td><td><span class="badge badge-bleu">6</span></td><td>20h</td><td>—</td><td>50h</td></tr>
+            <tr><td>INF402</td><td>Intelligence Artificielle (Introduction)</td><td><span class="badge badge-bleu">4</span></td><td>30h</td><td>15h</td><td>15h</td></tr>
+            <tr><td>INF403</td><td>Sécurité Informatique</td><td><span class="badge badge-bleu">4</span></td><td>30h</td><td>15h</td><td>—</td></tr>
+            <tr><td>INF404</td><td>Systèmes Distribués</td><td><span class="badge badge-bleu">4</span></td><td>30h</td><td>15h</td><td>—</td></tr>
+            <tr><td>INF405</td><td>Projet de Développement (équipe)</td><td><span class="badge badge-bleu">6</span></td><td>—</td><td>—</td><td>70h</td></tr>
+            <tr><td>INF406</td><td>Stage entreprise (4 semaines)</td><td><span class="badge badge-vert">6</span></td><td colspan="3">Stage professionnel</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="success-box">✅ <strong>Total S4 :</strong> 30 crédits</div>
+    </div>
+
+    <!-- S5 -->
+    <div class="tab-content" id="licence-s5">
+      <div class="info-box">📕 <strong>L3 — Semestre 5</strong> : Spécialisation et technologies avancées.</div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Code</th><th>Unité d'Enseignement</th><th>Crédits</th><th>CM</th><th>TD</th><th>TP</th></tr></thead>
+          <tbody>
+            <tr><td>INF501</td><td>Cloud Computing et Virtualisation</td><td><span class="badge badge-bleu">6</span></td><td>25h</td><td>—</td><td>50h</td></tr>
+            <tr><td>INF502</td><td>Développement Mobile (Android/iOS)</td><td><span class="badge badge-bleu">6</span></td><td>20h</td><td>—</td><td>55h</td></tr>
+            <tr><td>INF503</td><td>Machine Learning et Data Science</td><td><span class="badge badge-bleu">4</span></td><td>30h</td><td>15h</td><td>20h</td></tr>
+            <tr><td>INF504</td><td>Architectures Microservices et Docker</td><td><span class="badge badge-bleu">4</span></td><td>25h</td><td>—</td><td>35h</td></tr>
+            <tr><td>INF505</td><td>Gestion de Projet Informatique</td><td><span class="badge badge-bleu">4</span></td><td>30h</td><td>15h</td><td>—</td></tr>
+            <tr><td>INF506</td><td>Entrepreneuriat Numérique</td><td><span class="badge badge-bleu">3</span></td><td>20h</td><td>15h</td><td>—</td></tr>
+            <tr><td>ANG501</td><td>Anglais Professionnel</td><td><span class="badge badge-bleu">3</span></td><td>—</td><td>30h</td><td>—</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="success-box">✅ <strong>Total S5 :</strong> 30 crédits</div>
+    </div>
+
+    <!-- S6 -->
+    <div class="tab-content" id="licence-s6">
+      <div class="info-box">📕 <strong>L3 — Semestre 6</strong> : Projet de fin de Licence et stage long.</div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Code</th><th>Unité d'Enseignement</th><th>Crédits</th><th>CM</th><th>TD</th><th>TP</th></tr></thead>
+          <tbody>
+            <tr><td>INF601</td><td>Projet de Fin de Licence (PFL)</td><td><span class="badge badge-vert">12</span></td><td colspan="3">Projet individuel ou binôme — soutenance</td></tr>
+            <tr><td>INF602</td><td>Stage professionnel (8 semaines)</td><td><span class="badge badge-vert">9</span></td><td colspan="3">En entreprise ou laboratoire</td></tr>
+            <tr><td>INF603</td><td>Séminaires et conférences</td><td><span class="badge badge-bleu">3</span></td><td>—</td><td>30h</td><td>—</td></tr>
+            <tr><td>INF604</td><td>Préparation à la vie professionnelle</td><td><span class="badge badge-bleu">3</span></td><td>—</td><td>30h</td><td>—</td></tr>
+            <tr><td>INF605</td><td>UE Libre au choix</td><td><span class="badge badge-orange">3</span></td><td colspan="3">Au choix selon parcours</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="success-box">✅ <strong>Total S6 :</strong> 30 crédits — <strong>Total Licence : 180 crédits</strong></div>
+    </div>
+  </section>
+
+  <!-- ── MASTER ── -->
+  <section class="section" style="border-top:2px solid var(--bleu-pale)">
+    <h2 class="section-titre">Master Informatique (M1 → M2)</h2>
+    <p class="section-sous">Formation de 2 ans (4 semestres) — 120 crédits ECTS</p>
+
+    <div class="tabs">
+      <button class="tab-btn active" onclick="showTab('master','m1s1',this)">M1 — Semestre 7</button>
+      <button class="tab-btn" onclick="showTab('master','m1s2',this)">M1 — Semestre 8</button>
+      <button class="tab-btn" onclick="showTab('master','m2s1',this)">M2 — Semestre 9</button>
+      <button class="tab-btn" onclick="showTab('master','m2s2',this)">M2 — Semestre 10</button>
+    </div>
+
+    <div class="tab-content active" id="master-m1s1">
+      <div class="info-box">🎓 <strong>M1 — Semestre 7</strong> : Fondements du Master et spécialisation avancée.</div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Code</th><th>Unité d'Enseignement</th><th>Crédits</th><th>Volume</th></tr></thead>
+          <tbody>
+            <tr><td>MINF701</td><td>Algorithmes Avancés et Complexité</td><td><span class="badge badge-bleu">6</span></td><td>60h</td></tr>
+            <tr><td>MINF702</td><td>Intelligence Artificielle Avancée</td><td><span class="badge badge-bleu">6</span></td><td>60h</td></tr>
+            <tr><td>MINF703</td><td>Architecture des Systèmes Distribués</td><td><span class="badge badge-bleu">6</span></td><td>60h</td></tr>
+            <tr><td>MINF704</td><td>Big Data et Traitement de Données Massives</td><td><span class="badge badge-bleu">6</span></td><td>60h</td></tr>
+            <tr><td>MINF705</td><td>Recherche Scientifique et Méthodologie</td><td><span class="badge badge-bleu">6</span></td><td>45h</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="success-box">✅ <strong>Total S7 :</strong> 30 crédits</div>
+    </div>
+
+    <div class="tab-content" id="master-m1s2">
+      <div class="info-box">🎓 <strong>M1 — Semestre 8</strong> : Projets de recherche et spécialisation.</div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Code</th><th>Unité d'Enseignement</th><th>Crédits</th><th>Volume</th></tr></thead>
+          <tbody>
+            <tr><td>MINF801</td><td>Cybersécurité Avancée</td><td><span class="badge badge-bleu">6</span></td><td>60h</td></tr>
+            <tr><td>MINF802</td><td>DevOps et CI/CD (Docker, Kubernetes)</td><td><span class="badge badge-bleu">6</span></td><td>60h</td></tr>
+            <tr><td>MINF803</td><td>Deep Learning et Vision par Ordinateur</td><td><span class="badge badge-bleu">6</span></td><td>60h</td></tr>
+            <tr><td>MINF804</td><td>Projet de Recherche M1</td><td><span class="badge badge-vert">9</span></td><td>Projet</td></tr>
+            <tr><td>MINF805</td><td>Stage M1 (6 semaines)</td><td><span class="badge badge-vert">3</span></td><td>Stage</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="success-box">✅ <strong>Total S8 :</strong> 30 crédits</div>
+    </div>
+
+    <div class="tab-content" id="master-m2s1">
+      <div class="info-box">🎓 <strong>M2 — Semestre 9</strong> : Recherche approfondie et expertise.</div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Code</th><th>Unité d'Enseignement</th><th>Crédits</th><th>Volume</th></tr></thead>
+          <tbody>
+            <tr><td>MINF901</td><td>UE Spécialité au choix (3 options)</td><td><span class="badge badge-orange">6</span></td><td>60h</td></tr>
+            <tr><td>MINF902</td><td>Blockchain et Technologies Décentralisées</td><td><span class="badge badge-bleu">6</span></td><td>60h</td></tr>
+            <tr><td>MINF903</td><td>Optimisation et Simulation</td><td><span class="badge badge-bleu">4</span></td><td>45h</td></tr>
+            <tr><td>MINF904</td><td>Éthique du Numérique et Droit Informatique</td><td><span class="badge badge-bleu">4</span></td><td>40h</td></tr>
+            <tr><td>MINF905</td><td>Préparation Mémoire de Master</td><td><span class="badge badge-bleu">10</span></td><td>Encadrement</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="success-box">✅ <strong>Total S9 :</strong> 30 crédits</div>
+    </div>
+
+    <div class="tab-content" id="master-m2s2">
+      <div class="info-box">🎓 <strong>M2 — Semestre 10</strong> : Mémoire de fin de Master et stage long.</div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Code</th><th>Unité d'Enseignement</th><th>Crédits</th><th>Volume</th></tr></thead>
+          <tbody>
+            <tr><td>MINF1001</td><td>Mémoire de Master (rédaction et soutenance)</td><td><span class="badge badge-vert">20</span></td><td>Individuel</td></tr>
+            <tr><td>MINF1002</td><td>Stage de recherche ou professionnel (5 mois)</td><td><span class="badge badge-vert">10</span></td><td>Stage</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="success-box">✅ <strong>Total S10 :</strong> 30 crédits — <strong>Total Master : 120 crédits</strong></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <strong>Université Assane Seck de Ziguinchor</strong> — Département Informatique<br>
+  Ziguinchor, Sénégal | <a href="mailto:info@uasz.sn">info@uasz.sn</a>
+</footer>
+
+<script src="../js/nav.js"></script>
+<script>
+function showTab(group, id, btn) {
+  document.querySelectorAll('#' + group + '-s1, #' + group + '-s2, #' + group + '-s3, #' + group + '-s4, #' + group + '-s5, #' + group + '-s6, #' + group + '-m1s1, #' + group + '-m1s2, #' + group + '-m2s1, #' + group + '-m2s2').forEach(el => el.classList.remove('active'));
+  const target = document.getElementById(group + '-' + id);
+  if (target) target.classList.add('active');
+  btn.closest('.tabs').querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}
+</script>
+</body>
+</html>
